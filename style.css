@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 10px 10px 1em #666;
 }
 
 .genius {
@@ -18,6 +19,7 @@ body {
     border: 1px solid #ffffff;
     background-color: #ffffff;
     border-radius: 100%;
+    border-style: solid;
     width: 700px;
     height: 700px;
 }
@@ -26,26 +28,37 @@ body {
     grid-area: azul;
     background-color: blue;
     border-bottom-right-radius: 100%;
+    padding: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px blue, 0.3em 0.3em 3em black;
 }
 
 .red {
     grid-area: vermelho;
     background-color: red;
     border-top-right-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px red, 0.3em 0.3em 1em black;
 }
 
 .yellow {
     grid-area: amarelo;
     background-color: yellow;
     border-bottom-left-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px yellow, 0.3em 0.3em 1em black;
 }
 
 .green {
     grid-area: verde;
     background-color: green;
     border-top-left-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px green, 0.3em 0.3em 1em black;
 }
 
 .selected {
-    opacity: 0.4;
+    animation: blinker 1s;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
