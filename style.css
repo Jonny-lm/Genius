@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background-color: rgb(208, 255, 239);
+}
+
+.main-game {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 1em #666;
+}
+
+.genius {
+    display: grid;
+    grid-template-areas: 'verde vermelho' 'amarelo azul';
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    border-style: solid;
+    width: 700px;
+    height: 700px;
+}
+
+.blue {
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+    padding: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px blue, 0.3em 0.3em 3em black;
+}
+
+.red {
+    grid-area: vermelho;
+    background-color: red;
+    border-top-right-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px red, 0.3em 0.3em 1em black;
+}
+
+.yellow {
+    grid-area: amarelo;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px yellow, 0.3em 0.3em 1em black;
+}
+
+.green {
+    grid-area: verde;
+    background-color: green;
+    border-top-left-radius: 100%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px green, 0.3em 0.3em 1em black;
+}
+
+.play-buttom {
+    border: 10px solid white;
+    background-color:  rgba(29, 28, 28, 0.986);
+    border-radius: 100%;
+    position: absolute;
+    z-index: 99999;
+    width: 250px;
+    height: 250px;
+}
+
+.playNow{
+    position: absolute;
+    color: rgba(213, 245, 98, 0.753);
+    z-index: 99999;
+    font-size: 500%;
+    font-family: Impact, fantasy;
+    text-align: center; 
+}
+
+.score{
+    height: 20vh;
+    width: 10vw;
+    border-radius: 100%;
+    position: absolute;
+    color: rgba(213, 245, 98, 0.753);
+    background-color: rgb(208, 255, 239);
+    border: 0px solid #ffffff;
+    /* z-index: 99999; */
+    font-size: 500%;
+    font-family: Impact, fantasy;
+    text-align: center;
+    pointer-events:none;
+    outline:none;
+    
+
+}
+
+.selected {
+    animation: blinker 1s;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
